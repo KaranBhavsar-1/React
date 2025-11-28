@@ -7,14 +7,19 @@ function App() {
   let [counter, setCounter] = useState(2)
 
   const addValue = ()=>{
-    counter++
-    setCounter(counter)
+    // counter++
+    setCounter( counter => counter+1)
+    setCounter( counter => counter+1)
+    setCounter( counter => counter+1)
+    setCounter( counter => counter+1)
+    // will give the present value of the counter instead of the batch value of counter
     console.log(counter);  
   }
 
   const removeValue = ()=>{
     if (counter>0) {
-    counter--
+    setCounter(counter-1)
+    // counter--
     }
     setCounter(counter)
     console.log(counter);
@@ -28,6 +33,8 @@ function App() {
     </div>
     <div>
       <button onClick={addValue}>Add Value {counter}</button>
+      <br />
+      <br />
       <button onClick={removeValue}>Remove Value {counter}</button>
     </div>
     </>

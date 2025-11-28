@@ -66,7 +66,7 @@ function App() {
       <h1>Done by passing them seperately like strings</h1>
       <br />
       <div>
-         <Card_2
+        <Card_2
           index={myCharacters.nefer[0].name}
           src={myCharacters.nefer[0].src}
           name={myCharacters.nefer[0].name}
