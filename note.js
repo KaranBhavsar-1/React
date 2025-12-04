@@ -45,13 +45,22 @@
 //   else{console.log("true");
 //   }
 // console.log(char);
-const length = 8;
-const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-let pass = "";
-for (let i = 1; i <= length; i++) {
-  let char = Math.floor(Math.random() * str.length);
-  // console.log(str[char]);
-  pass += str[char];
-  pass += str.charAt(char);
-}
-console.log(pass);
+// const length = 8;
+// const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+// let pass = "";
+// for (let i = 1; i <= length; i++) {
+//   let char = Math.floor(Math.random() * str.length);
+//   // console.log(str[char]);
+//   pass += str[char];
+//   pass += str.charAt(char);
+// }
+// console.log(pass);
+let data = ""
+currency = "usd"
+fetch(
+  `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`
+)
+  .then((res) => res.json())
+  .then((res) => {data = res[currency]
+console.log(data)}
+);
