@@ -39,9 +39,19 @@
 // console.log(pass);
 // console.log(pass.length);
 
-num = "true"
+// num = "true"
 
-if (num){console.log("false");}
-  else{console.log("true");
-  }
+// if (num){console.log("false");}
+//   else{console.log("true");
+//   }
 // console.log(char);
+const length = 8;
+const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+let pass = "";
+for (let i = 1; i <= length; i++) {
+  let char = Math.floor(Math.random() * str.length);
+  // console.log(str[char]);
+  pass += str[char];
+  pass += str.charAt(char);
+}
+console.log(pass);
